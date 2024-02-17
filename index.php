@@ -2,8 +2,10 @@
 include 'layout/header.php';
 include 'layout/navbar.php';
 include 'layout/sidebar.php'; 
- 
+include 'koneksi_database.php';
 
+$data = "select * from buku";
+$hasil = $koneksi->query ($data);
 ?>
 <body>
     
@@ -19,8 +21,8 @@ include 'layout/sidebar.php';
                     <div class="col-6">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 d-flex align-items-center">
-                              <li class="breadcrumb-item"><a href="index.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Starter Page</li>
+                              <!-- <li class="breadcrumb-item"><a href="index.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li> -->
+                              <!-- <li class="breadcrumb-item active" aria-current="page">Starter Page</li> -->
                             </ol>
                           </nav>
                         <!-- <h1 class="mb-0 fw-bold">Starter Page</h1>  -->
@@ -33,9 +35,45 @@ include 'layout/sidebar.php';
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <!-- <div class="card-body">
-                                This is some text within a card block.
-                            </div> -->
+                        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Judul</th>
+      <th scope="col">no_isbn</th>
+      <th scope="col">Penulis</th>
+      <th scope="col">Tahun</th>
+      <th scope="col">Stok</th>
+      <th scope="col">Harga_pokok</th>
+      <th scope="col">Harga_jual</th>
+      <th scope="col">Ppn</th>
+      <th scope="col">Diskon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    $i=1; 
+    foreach ($hasil as $row) {
+    ?>
+    <tr>
+      <th scope="row"><?=$i ?></th>
+      <td><?= $row["judul"] ?></td>
+      <td><?= $row["noisbn"] ?></td>
+      <td><?= $row["penulis"] ?></td>
+      <td><?= $row["tahun"] ?></td>
+      <td><?= $row["stok"] ?></td>
+      <td><?= $row["harga_pokok"] ?></td>
+      <td><?= $row["harga_jual"] ?></td>
+      <td><?= $row["ppn"] ?></td>
+      <td><?= $row["diskon"] ?></td>
+      
+    </tr>
+    <?php 
+    $i++;
+    }
+    ?>
+  </tbody>
+</table>
                         </div>
                     </div>
                 </div>
