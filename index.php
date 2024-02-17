@@ -23,7 +23,7 @@ include 'layout/sidebar.php';
                               <li class="breadcrumb-item active" aria-current="page">Starter Page</li>
                             </ol>
                           </nav>
-                        <h1 class="mb-0 fw-bold">Starter Page</h1> 
+                        <!-- <h1 class="mb-0 fw-bold">Starter Page</h1>  -->
                     </div>
                     <div class="col-6">
                     </div>
