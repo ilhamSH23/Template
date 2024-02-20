@@ -31,7 +31,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="tahun" class="form-label">tahun</label>
-                    <input type="date" class="form-control" id="tahun" name="tahun">
+                    <input type="number" class="form-control" id="tahun" name="tahun">
                 </div>
                 <div class="mb-3">
                     <label for="stock" class="form-label">stock</label>
@@ -57,7 +57,7 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> -->
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
         </div>
     </div>

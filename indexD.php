@@ -1,7 +1,7 @@
 <?php 
 include 'koneksi_database.php';
 
-$data = "select * from buku";
+$data = "select * from distributor";
 $hasil = $koneksi->query ($data);
 ?>
 
@@ -10,7 +10,10 @@ $hasil = $koneksi->query ($data);
   include 'layout/navbar.php';
   include 'layout/sidebar.php';
 ?>
-<body>    
+<body>
+
+
+    
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
        
@@ -39,16 +42,9 @@ $hasil = $koneksi->query ($data);
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Judul</th>
-      <th scope="col">no_isbn</th>
-      <th scope="col">Penulis</th>
-      <th scope="col">Tahun</th>
-      <th scope="col">Stok</th>
-      <th scope="col">Harga_pokok</th>
-      <th scope="col">Harga_jual</th>
-      <th scope="col">Ppn</th>
-      <th scope="col">Diskon</th>
-      <th scope="col">Aksi</th>
+      <th scope="col">Nama_Distributor</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">Telpon</th>
     </tr>
   </thead>
   <tbody>
@@ -58,15 +54,9 @@ $hasil = $koneksi->query ($data);
     ?>
     <tr>
       <th scope="row"><?=$i ?></th>
-      <td><?= $row["judul"] ?></td>
-      <td><?= $row["noisbn"] ?></td>
-      <td><?= $row["penulis"] ?></td>
-      <td><?= $row["tahun"] ?></td>
-      <td><?= $row["stok"] ?></td>
-      <td><?= $row["harga_pokok"] ?></td>
-      <td><?= $row["harga_jual"] ?></td>
-      <td><?= $row["ppn"] ?></td>
-      <td><?= $row["diskon"] ?></td>
+      <td><?= $row["nama_distributor"] ?></td>
+      <td><?= $row["alamat"] ?></td>
+      <td><?= $row["telepon"] ?></td>
       <td> <button type="submit" class="btn btn-primary">Delete</button>
       <button type="submit" class="btn btn-primary">Edit</button>
     </td>

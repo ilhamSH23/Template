@@ -1,5 +1,5 @@
 <?php 
-include "koneksi_database.php";
+include "../koneksi_database.php";
 $data = "INSERT INTO buku(judul,noisbn,penulis,tahun,stok,harga_pokok,harga_jual,ppn,diskon) VALUES
 (
     '".$_POST['Judul']."',
