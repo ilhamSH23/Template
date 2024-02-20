@@ -18,34 +18,34 @@
             <div class="mt-3 mb-3">
                 <h4 class="text-center">Kasir</h4>
             </div>
-            <form action="buku.php" method="post">
+            <form action="kasir.php" method="post">
                 <div class="mb-3">
                     <label for="nama_distributor" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="nama_distributor" name="Judul">
                 </div>
                 <div class="mb-3">
                     <label for="alamat" class="form-label">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" name="no_isbn">
+                    <input type="text" class="form-control" id="alamat" name="alamat">
                 </div>
                 <div class="mb-3">
                     <label for="telepon" class="form-label">Telepon</label>
-                    <input type="text" class="form-control" id="telepon" name="penulis">
+                    <input type="text" class="form-control" id="telepon" name="telepon">
                 </div>
                 <div class="mb-3">
                     <label for="telepon" class="form-label">Status</label>
-                    <input type="text" class="form-control" id="telepon" name="penulis">
+                    <input type="text" class="form-control" id="telepon" name="status">
                 </div>
                 <div class="mb-3">
                     <label for="telepon" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="telepon" name="penulis">
+                    <input type="text" class="form-control" id="telepon" name="username">
                 </div>
                 <div class="mb-3">
                     <label for="telepon" class="form-label">Password</label>
-                    <input type="text" class="form-control" id="telepon" name="penulis">
+                    <input type="text" class="form-control" id="telepon" name="password">
                 </div>
                 <div class="mb-3">
                     <label for="telepon" class="form-label">akses</label>
-                    <input type="text" class="form-control" id="telepon" name="penulis">
+                    <input type="text" class="form-control" id="telepon" name="akses">
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

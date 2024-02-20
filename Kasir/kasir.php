@@ -1,5 +1,5 @@
 <?php 
-include "../koneksi_database.php";
+include "koneksi_database.php";
 $data = "INSERT INTO kasir(nama,alamat,telepon,status,username,password,akses) VALUES
 (
     '".$_POST['nama_distributor']."',
@@ -11,5 +11,5 @@ $data = "INSERT INTO kasir(nama,alamat,telepon,status,username,password,akses) V
     '".$_POST['akses']."',
 )";
  
-$koneksi1->query($data);
+$koneksi->query($data);
 ?>
