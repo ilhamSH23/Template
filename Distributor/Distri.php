@@ -1,9 +1,8 @@
 <?php 
 include "../koneksi_database.php";
-$data = "INSERT INTO buku(id_distributor,nama_distributor,alamat,telepon) VALUES
+$data = "INSERT INTO distributor(nama_distributor,alamat,tahun) VALUES
 (
-    '".$_POST['id_distributor']."',
-    '".$_POST['distributor']."',
+    '".$_POST['nama_distributor']."',
     '".$_POST['alamat']."',
     '".$_POST['telepon']."',
 )";

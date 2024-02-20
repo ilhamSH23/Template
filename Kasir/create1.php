@@ -20,8 +20,8 @@
             </div>
             <form action="kasir.php" method="post">
                 <div class="mb-3">
-                    <label for="nama_distributor" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="nama_distributor" name="Judul">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama">
                 </div>
                 <div class="mb-3">
                     <label for="alamat" class="form-label">Alamat</label>
@@ -32,20 +32,20 @@
                     <input type="text" class="form-control" id="telepon" name="telepon">
                 </div>
                 <div class="mb-3">
-                    <label for="telepon" class="form-label">Status</label>
-                    <input type="text" class="form-control" id="telepon" name="status">
+                    <label for="status" class="form-label">Status</label>
+                    <input type="text" class="form-control" id="status" name="status">
                 </div>
                 <div class="mb-3">
-                    <label for="telepon" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="telepon" name="username">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username">
                 </div>
                 <div class="mb-3">
-                    <label for="telepon" class="form-label">Password</label>
-                    <input type="text" class="form-control" id="telepon" name="password">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="text" class="form-control" id="password" name="password">
                 </div>
                 <div class="mb-3">
-                    <label for="telepon" class="form-label">akses</label>
-                    <input type="text" class="form-control" id="telepon" name="akses">
+                    <label for="akses" class="form-label">akses</label>
+                    <input type="text" class="form-control" id="akses" name="akses">
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

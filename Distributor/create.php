@@ -20,12 +20,8 @@
             </div>
             <form action="Distri.php" method="post">
                 <div class="mb-3">
-                    <label for="id_distributor" class="form-label">Nama_distributor</label>
-                    <input type="text" class="form-control" id="id_distributor" name="id_dsitributor">
-                </div>
-                <div class="mb-3">
-                    <label for="distributor" class="form-label">Nama_distributor</label>
-                    <input type="text" class="form-control" id="distributor" name="dsitributor">
+                    <label for="nama_distributor" class="form-label">Nama_distributor</label>
+                    <input type="text" class="form-control" id="nama_distributor" name="nama_distributor">
                 </div>
                 <div class="mb-3">
                     <label for="alamat" class="form-label">Alamat</label>
