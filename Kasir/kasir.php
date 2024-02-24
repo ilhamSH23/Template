@@ -8,8 +8,9 @@ $data = "INSERT INTO kasir(nama,alamat,telepon,status,username,password,akses) V
     '".$_POST['status']."',
     '".$_POST['username']."',
     '".$_POST['password']."',
-    '".$_POST['akses']."',
+    '".$_POST['akses']."'
 )";
  
 $koneksi->query($data);
+Header("Location../table.php")
 ?>
