@@ -38,7 +38,7 @@ $hasil = $koneksi->query ($data);
                         <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">No</th>
       <th scope="col">Judul</th>
       <th scope="col">no_isbn</th>
       <th scope="col">Penulis</th>
