@@ -1,23 +1,22 @@
-<?php 
+<?php
 include "../koneksi_database.php";
-$sql = 'SELECT * from kasir WHERE id_kasir='.$_GET['id'];
+$sql = 'SELECT * from kasir WHERE id_kasir=' . $_GET['id'];
 $hasil = $koneksi->query($sql);
 $tampil = ($hasil->fetch_assoc());
-if(isset($_POST['nama'])){
-    $sql='UPDATE kasir SET 
-    nama="'.$_POST['nama'].'",
-    alamat="'.$_POST['alamat'].'",
-    telepon="'.$_POST['telepon'].'",
-    status="'.$_POST['status'].'",
-    username="'.$_POST['username'].'",
-    password="'.$_POST['password'].'",
-    akses="'.$_POST['akses'].'"
-    WHERE id_kasir = "'.$_GET['id'].'"
+if (isset($_POST['nama'])) {
+    $sql = 'UPDATE kasir SET 
+    nama="' . $_POST['nama'] . '",
+    alamat="' . $_POST['alamat'] . '",
+    telepon="' . $_POST['telepon'] . '",
+    status="' . $_POST['status'] . '",
+    username="' . $_POST['username'] . '",
+    password="' . $_POST['password'] . '",
+    akses="' . $_POST['akses'] . '"
+    WHERE id_kasir = "' . $_GET['id'] . '"
     ';
-$koneksi->query($sql);
-header  ("location:../tableK.php");
-}
-; ?>
+    $koneksi->query($sql);
+    header("location:../tableK.php");
+}; ?>
 
 <!doctype html>
 <html lang="en">
