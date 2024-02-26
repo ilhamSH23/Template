@@ -37,7 +37,7 @@ header  ("location:../indexP.php");
                 <h4 class="text-center">PASOK</h4>
             </div>
             <form action="pasok.php" method="post">
-                <div class="mb-3">
+                 <div class="mb-3">
                     <label for="id_distributor" class="form-label">id_distributor</label>
                     <input type="number" class="form-control" id="id_distributor" name="id_distributor" value="<?= $tampil['id_distributor']; ?>">
                 </div>

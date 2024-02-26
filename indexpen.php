@@ -31,12 +31,12 @@ $hasil = $koneksi->query ($data);
             
                 <div class="row">
                     <div class="col-12">
-                    <a href="PENJUALAN/create2.php" class="btn btn-primary">TAMBAH</a>
+                    <a href="PENJUALAN/create2.php" class="btn btn-primary" style="margin-bottom: 20px;margin-left: 20px;">TAMBAH</a>
                         <div class="card">
                         <table class="table">
   <thead>
     <tr>
-    <th scope="col">#</th>
+    <th scope="col">No</th>
       <th scope="col">id_distributor</th>
       <th scope="col">id_buku</th>
       <th scope="col">jumlah</th>
