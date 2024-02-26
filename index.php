@@ -34,6 +34,7 @@ $hasil = $koneksi->query ($data);
             
                 <div class="row">
                     <div class="col-12">
+                      <a href="BUKU/create.php" class="btn btn-primary">TAMBAH</a>
                         <div class="card">
                         <table class="table">
   <thead>
@@ -46,8 +47,6 @@ $hasil = $koneksi->query ($data);
       <th scope="col">Stok</th>
       <th scope="col">Harga_pokok</th>
       <th scope="col">Harga_jual</th>
-      <th scope="col">Ppn</th>
-      <th scope="col">Diskon</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
@@ -65,8 +64,7 @@ $hasil = $koneksi->query ($data);
       <td><?= $row["stok"] ?></td>
       <td><?= $row["harga_pokok"] ?></td>
       <td><?= $row["harga_jual"] ?></td>
-      <td><?= $row["ppn"] ?></td>
-      <td><?= $row["diskon"] ?></td>
+  
       <td>
         <a href="BUKU/edit.php?id=<?= $row ['id_buku']; ?>" class="btn btn-primary">Edit</a>
         <a href="BUKU/delete.php?id=<?= $row ['id_buku']; ?>" class="btn btn-danger">Delete</a>

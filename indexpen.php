@@ -1,7 +1,7 @@
 <?php 
 include 'koneksi_database.php';
 
-$data = "select * from pasok";
+$data = "select * from penjualan";
 $hasil = $koneksi->query ($data);
 ?>
 
@@ -31,14 +31,16 @@ $hasil = $koneksi->query ($data);
             
                 <div class="row">
                     <div class="col-12">
+                    <a href="PENJUALAN/create2.php" class="btn btn-primary">TAMBAH</a>
                         <div class="card">
                         <table class="table">
   <thead>
     <tr>
     <th scope="col">#</th>
-      <th scope="col">id_dsitributor</th>
+      <th scope="col">id_distributor</th>
       <th scope="col">id_buku</th>
       <th scope="col">jumlah</th>
+      <th scope="col">total</th>
       <th scope="col">tanggal</th>
     </tr>
   </thead>
@@ -49,12 +51,15 @@ $hasil = $koneksi->query ($data);
     ?>
     <tr>
     <th scope="row"><?=$i ?></th>
-      <td><?= $row["id_distributor"] ?></td>
       <td><?= $row["id_buku"] ?></td>
+      <td><?= $row["id_kasir"] ?></td>
       <td><?= $row["jumlah"] ?></td>
+      <td><?= $row["total"] ?></td>
       <td><?= $row["tanggal"] ?></td>
-      <td> <button type="submit" class="btn btn-primary">Delete</button>
-      <button type="submit" class="btn btn-primary">Edit</button>
+      <td>
+      <a href="PENJUALAN/edit.php?id=<?= $row ['id_penjualan']; ?>" class="btn btn-primary">Edit</a>
+        <a href="PENJUALAN/delete.php?id=<?= $row ['id_penjualan']; ?>" class="btn btn-danger">Delete</a>
+      </td>
     </td>
     </tr>
     <?php 

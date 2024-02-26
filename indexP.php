@@ -31,6 +31,7 @@ $hasil = $koneksi->query ($data);
             
                 <div class="row">
                     <div class="col-12">
+                    <a href="PASOK/createP.php" class="btn btn-primary">TAMBAH</a>
                         <div class="card">
                         <table class="table">
   <thead>
@@ -53,8 +54,11 @@ $hasil = $koneksi->query ($data);
       <td><?= $row["id_buku"] ?></td>
       <td><?= $row["jumlah"] ?></td>
       <td><?= $row["tanggal"] ?></td>
-      <td> <button type="submit" class="btn btn-primary">Delete</button>
-      <button type="submit" class="btn btn-primary">Edit</button>
+    </td>
+    <td>
+    <a href="PASOK/edit.php?id=<?= $row ['id_pasok']; ?>" class="btn btn-primary">Edit</a>
+        <a href="PASOK/delete.php?id=<?= $row ['id_pasok']; ?>" class="btn btn-danger">Delete</a>
+
     </td>
     </tr>
     <?php 

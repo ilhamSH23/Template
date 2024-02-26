@@ -1,3 +1,21 @@
+<?php 
+include "../koneksi_database.php";
+$sql = 'SELECT * from pasok WHERE id_pasok='.$_GET['id'];
+$hasil = $koneksi->query($sql);
+$tampil = ($hasil->fetch_assoc());
+if(isset($_POST['id_pasok'])){
+    $sql='UPDATE pasok SET 
+    id_distributor="'.$_POST['id_distributor'].'",
+    id_buku="'.$_POST['id_buku'].'",
+    jumlah="'.$_POST['jumlah'].'",
+    tanggal="'.$_POST['tanggal'].'",
+    WHERE id_pasok = "'.$_GET['id'].'"
+    ';
+$koneksi->query($sql);
+header  ("location:../indexP.php");
+}
+; ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -16,28 +34,24 @@
     <div class="container">
         <div class="card p-5 mt-5">
             <div class="mt-3 mb-3">
-                <h4 class="text-center">PENJUALAN</h4>
+                <h4 class="text-center">PASOK</h4>
             </div>
-            <form action="pen.php" method="post">
+            <form action="pasok.php" method="post">
                 <div class="mb-3">
-                    <label for="id_buku" class="form-label">id_buku</label>
-                    <input type="text" class="form-control" id="id_buku" name="id_buku">
+                    <label for="id_distributor" class="form-label">id_distributor</label>
+                    <input type="number" class="form-control" id="id_distributor" name="id_distributor" value="<?= $tampil['id_distributor']; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="id_kasir" class="form-label">id_kasir</label>
-                    <input type="text" class="form-control" id="id_kasir" name="id_kasir">
+                    <label for="id_buku" class="form-label">id_buku</label>
+                    <input type="number" class="form-control" id="id_buku" name="id_buku" value="<?= $tampil['id_buku']; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="jumlah" class="form-label">jumlah</label>
-                    <input type="text" class="form-control" id="jumlah" name="jumlah">
-                </div>
-                <div class="mb-3">
-                    <label for="total" class="form-label">total</label>
-                    <input type="text" class="form-control" id="total" name="total">
+                    <input type="number" class="form-control" id="jumlah" name="jumlah" value="<?= $tampil['jumlah']; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="tanggal" class="form-label">tanggal</label>
-                    <input type="date" class="form-control" id="tanggal" name="tanggal">
+                    <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $tampil['tanggal']; ?>">
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

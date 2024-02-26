@@ -34,6 +34,7 @@ $hasil = $koneksi->query ($data);
             
                 <div class="row">
                     <div class="col-12">
+                    <a href="KASIR/create1.php" class="btn btn-primary">TAMBAH</a>
                         <div class="card">
                         <table class="table">
   <thead>
@@ -62,8 +63,10 @@ $hasil = $koneksi->query ($data);
       <td><?= $row["username"] ?></td>
       <td><?= $row["password"] ?></td>
       <td><?= $row["akses"] ?></td>
-      <td> <button type="submit" class="btn btn-primary">Delete</button>
-      <button type="submit" class="btn btn-primary">Edit</button>
+      <td>
+      <a href="Kasir/edit.php?id=<?= $row ['id_kasir']; ?>" class="btn btn-primary">Edit</a>
+        <a href="kasir/delete.php?id=<?= $row ['id_kasir']; ?>" class="btn btn-danger">Delete</a>
+      </td>
     </td>
     </tr>
     <?php 

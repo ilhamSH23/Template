@@ -1,16 +1,14 @@
 <?php 
 include "../koneksi_database.php";
-$data = "INSERT INTO kasir(nama,alamat,telepon,status,username,password,akses) VALUES
+$data = "INSERT INTO penjualan(id_buku,id_kasir,jumlah,total,tanggal) VALUES
 (
-    '".$_POST['nama']."',
-    '".$_POST['alamat']."',
-    '".$_POST['telepon']."',
-    '".$_POST['status']."',
-    '".$_POST['username']."',
-    '".$_POST['password']."',
-    '".$_POST['akses']."'
+    '".$_POST['id_buku']."',
+    '".$_POST['id_kasir']."',
+    '".$_POST['jumlah']."',
+    '".$_POST['total']."',
+    '".$_POST['tanggal']."'
 )";
  
-$koneksi->query($data);
-Header("Location../tableK.php")
+    $koneksi->query($data);
+    Header("Location../indexpen.php")
 ?>
