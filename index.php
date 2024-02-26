@@ -69,6 +69,7 @@ $hasil = $koneksi->query ($data);
       <td><?= $row["diskon"] ?></td>
       <td>
         <a href="BUKU/edit.php?id=<?= $row ['id_buku']; ?>" class="btn btn-primary">Edit</a>
+        <a href="BUKU/delete.php?id=<?= $row ['id_buku']; ?>" class="btn btn-danger">Delete</a>
     </td>
     </tr>
     <?php 

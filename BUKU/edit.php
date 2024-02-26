@@ -3,16 +3,17 @@ include "../koneksi_database.php";
 $sql = 'SELECT * from buku WHERE id_buku='.$_GET['id'];
 $hasil = $koneksi->query($sql);
 $tampil = ($hasil->fetch_assoc());
-if(isset($_POST['id_buku'])){
+if(isset($_POST['Judul'])){
     $sql='UPDATE buku SET 
     Judul="'.$_POST['Judul'].'",
-    no_isbn="'.$_POST['no_isbn'].'",
+    noisbn="'.$_POST['no_isbn'].'",
     penulis="'.$_POST['penulis'].'",
-    tahun="'.$_POST['stok'].'",
+    tahun="'.$_POST['stock'].'",
     harga_pokok="'.$_POST['harga_pokok'].'",
     harga_jual="'.$_POST['harga_jual'].'",
     ppn="'.$_POST['ppn'].'",
     diskon="'.$_POST['diskon'].'"
+    WHERE id_buku = "'.$_GET['id'].'"
     ';
 $koneksi->query($sql);
 header  ("location:../index.php");
@@ -43,7 +44,7 @@ header  ("location:../index.php");
                 </div>
                 <div class="mb-3">
                     <label for="no_isbn" class="form-label">no_isbn</label>
-                    <input type="text" class="form-control" id="no_isbn" name="no_isbn" value="<?= $tampil['no_isbn']; ?>">
+                    <input type="text" class="form-control" id="no_isbn" name="no_isbn" value="<?= $tampil['noisbn']; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="penulis" class="form-label">Penulis</label>
@@ -55,7 +56,7 @@ header  ("location:../index.php");
                 </div>
                 <div class="mb-3">
                     <label for="stock" class="form-label">stock</label>
-                    <input type="text" class="form-control" id="stock" name="stock" value="<?= $tampil['stock']; ?>">
+                    <input type="text" class="form-control" id="stock" name="stock" value="<?= $tampil['stok']; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="harga_pokok" class="form-label">harga_pokok</label>

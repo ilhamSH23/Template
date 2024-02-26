@@ -49,7 +49,7 @@ $hasil = $koneksi->query ($data);
     ?>
     <tr>
     <th scope="row"><?=$i ?></th>
-      <td><?= $row["id_dsitributor"] ?></td>
+      <td><?= $row["id_distributor"] ?></td>
       <td><?= $row["id_buku"] ?></td>
       <td><?= $row["jumlah"] ?></td>
       <td><?= $row["tanggal"] ?></td>
