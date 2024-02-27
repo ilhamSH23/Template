@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['username'] = $userdata['username'];
                 $_SESSION['akses'] = $userdata['akses'];
                 
-                header("location:index.php");
+                header("location:index.php");    
                 exit();
             } else {
                 $error = "Password salah, silahkan coba lagi.";
@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 mysqli_close($koneksi);
+print_r($error);
 ?>
 
 
@@ -86,7 +87,12 @@ mysqli_close($koneksi);
 </head>
 <body>
     <div class="login-container">
+        <?php if (isset($_POST[$error])) {
+        }
+        
+        ?>
         <h2>Login</h2>
+
         <form action="#" method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
