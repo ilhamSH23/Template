@@ -88,8 +88,8 @@ print_r($error);
 <body>
     <div class="login-container">
         <?php if (isset($_POST[$error])) {
+            
         }
-        
         ?>
         <h2>Login</h2>
 

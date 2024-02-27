@@ -1,4 +1,10 @@
-
+<?php 
+session_start();
+if (!isset($_SESSION["username"]) ){
+    header("location:../login,php");
+    exit();
+}
+?>
 <?php
 include '../layout/header.php';
 include '../layout/navbar.php';
