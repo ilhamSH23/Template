@@ -9,10 +9,9 @@
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../tableK.php" aria-expanded="false"></i><span class="hide-menu text-dark">Kasir</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../indexP.php" aria-expanded="false"></i><span class="hide-menu text-dark">Pasok</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../indexpen.php" aria-expanded="false"></i><span class="hide-menu text-dark">Penjualan</span></a></li>
-                <!-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span class="hide-menu">404</span></a></li> -->
-                <li class="text-center p-40 upgrade-btn">
-                    <!-- <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" class="btn d-block w-100 btn-danger text-white" target="_blank">Upgrade to Pro</a> -->
-                </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../login.php" aria-expanded="false"></i><span class="hide-menu text-dark">Logout</span></a></li>
+                               <li class="text-center p-40 upgrade-btn">
+                  </li>
             </ul>
 
         </nav>
